@@ -1,16 +1,7 @@
+# Configuration spécifique au service hôtel
 server:
-  port: 8080
-
-spring:
-  application:
-    name: hotel-service
-  datasource:
-    url: jdbc:h2:mem:hoteldb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  port: 8081
+service:
+  name: "Hotel Service"
+database:
+  name: "hotel_db"
