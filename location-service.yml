@@ -1,16 +1,7 @@
+# Configuration spécifique au service location
 server:
-  port: 8081
-
-spring:
-  application:
-    name: location-service
-  datasource:
-    url: jdbc:h2:mem:locationdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  port: 8082
+service:
+  name: "Location Service"
+database:
+  name: "location_db"
