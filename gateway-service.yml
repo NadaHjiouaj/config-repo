@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: hotel_route
+          uri: lb://HOTEL-SERVICE  
+          predicates:
+            - Path=/api/hotels/**
+        - id: location_route
+          uri: lb://LOCATION-SERVICE
+          predicates:
+            - Path=/api/locations/**
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+# ⭐⭐⭐ CONFIGURATION ZIPKIN ⭐⭐⭐
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
