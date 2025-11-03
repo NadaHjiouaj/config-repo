@@ -1,5 +1,0 @@
-# Configuration globale pour tous les services
-welcome:
-  message: "Bonjour depuis le Config Server!"
-app:
-  version: "1.0.0"
