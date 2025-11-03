@@ -1,7 +1,0 @@
-# Configuration spécifique au service hôtel
-server:
-  port: 8081
-service:
-  name: "Hotel Service"
-database:
-  name: "hotel_db"
