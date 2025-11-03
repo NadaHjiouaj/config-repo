@@ -1,7 +1,0 @@
-# Configuration spécifique au service location
-server:
-  port: 8082
-service:
-  name: "Location Service"
-database:
-  name: "location_db"
